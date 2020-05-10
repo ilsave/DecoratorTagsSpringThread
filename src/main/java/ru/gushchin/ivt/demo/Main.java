@@ -13,7 +13,7 @@ public class Main {
     public static void main(String[] args) throws InterruptedException {
 
 
-        ExecutorService executorService = Executors.newFixedThreadPool(1);
+        ExecutorService executorService = Executors.newFixedThreadPool(5);
 
         for(int i = 0; i < 5; i++){
             executorService.submit(new Visit(i));
@@ -37,29 +37,5 @@ public class Main {
 }
 
 
-class Visit implements Runnable{
-    private int id;
 
-    public Visit(int id){
-        this.id = id;
-    }
-    @Override
-    public void run() {
-        try {
-            StringBuilder path = new StringBuilder("C:\\Users\\дом\\Documents\\GitHub\\DecoratorTagsSpring\\src\\main\\java\\ru\\gushchin\\ivt\\demo\\StudentPojo");
-
-
-            Thread.sleep(1000);
-            int randomNum = ThreadLocalRandom.current().nextInt(1, 3 + 1);
-
-            path.append(randomNum).append(".java");
-            FileManager.CopyToHTML(FileManager.PrintInFile(FileManager.makeList(path.toString()), FileManager.checkFile()),randomNum);
-        }catch (IOException e){
-            e.printStackTrace();
-        }catch (InterruptedException e){
-            e.printStackTrace();
-        }
-
-    }
-}
 

@@ -5,7 +5,7 @@ This file can be used for testing
  */
 
 public class StudentPojo3 {
-    private final String nationality="Украинец";
+    private  final String nationality="Украинец";
     private String name;
     private String otherPersonalInfo;
     protected String nameOfUni;

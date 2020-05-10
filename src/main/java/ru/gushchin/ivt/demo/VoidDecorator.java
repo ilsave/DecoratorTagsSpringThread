@@ -11,7 +11,7 @@ public class VoidDecorator implements ReturnInterface {
     @Override
     public String sendBackLine(String line) {
         StringBuilder a = new StringBuilder();
-        String[] words= line.split(" \\s");
+        String[] words= line.split(" ");
         int b = 1;
         for (String ln : words){
             if ("void".equals(ln)){
