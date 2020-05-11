@@ -13,14 +13,15 @@ public class Main {
     public static void main(String[] args) throws InterruptedException {
 
 
-        ExecutorService executorService = Executors.newFixedThreadPool(5);
+        ExecutorService executorService = Executors.newFixedThreadPool(5); // задаем пул и количество потоковв нем
 
         for(int i = 0; i < 5; i++){
-            executorService.submit(new Visit(i));
+            executorService.submit(new Visit(i)); //раздаем задания
         }
-         executorService.shutdown();
+        executorService.shutdown();//перестаем принимать задания и начинаем выполнение
+
         System.out.println("all task submitted");
-        executorService.awaitTermination(1, TimeUnit.HOURS);
+        executorService.awaitTermination(1, TimeUnit.HOURS); //ожидание окончания работы
 
         // Коротко, но понятно
         //String path = FileManager.getPath(); // Пользователь указывает путь к файлу с кодом
