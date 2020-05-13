@@ -108,6 +108,7 @@ public class FileManager {
             InputStream is = null;
             OutputStream os = null;
             StringBuilder pathname = new StringBuilder("result");
+
             pathname.append(a).append(".html");
             File dest = new File(pathname.toString()); // Файл, куда будет записан html код
             try {
