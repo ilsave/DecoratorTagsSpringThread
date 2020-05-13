@@ -20,7 +20,7 @@ public class Main {
         }
         executorService.shutdown();//перестаем принимать задания и начинаем выполнение
 
-        System.out.println("all task submitted");
+        System.out.println("all tasks submitted");
         executorService.awaitTermination(1, TimeUnit.HOURS); //ожидание окончания работы
 
 

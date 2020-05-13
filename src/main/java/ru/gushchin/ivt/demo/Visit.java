@@ -12,7 +12,7 @@ class Visit implements Runnable{
     @Override
     public void run() {
         try {
-            StringBuilder path = new StringBuilder("C:\\Users\\дом\\Documents\\GitHub\\DecoratorTagsSpringThread3\\src\\main\\java\\ru\\gushchin\\ivt\\demo\\StudentPojo");
+            StringBuilder path = new StringBuilder("./src/main/java/ru/gushchin/ivt/demo/StudentPojo");
             Thread.sleep(1000);
             int randomNum = ThreadLocalRandom.current().nextInt(1, 3 + 1);
 
